@@ -1,0 +1,27 @@
+[
+    {
+        "id": 1,
+        "title": "Pintura 1", 
+        "value": 390, 
+        "stock": 5, 
+        "src": "https://png.pngtree.com/background/20210715/original/pngtree-colorful-abstract-painting-background-liquid-marbling-paint-background-design-picture-image_1254871.jpg",
+        "info": "Esta es la información del producto."
+    },
+
+    {
+        "id": 2, 
+        "title": "Pintura 2", 
+        "value": 450, 
+        "stock": 6, 
+        "src": "https://png.pngtree.com/background/20210715/original/pngtree-fluid-painting-abstract-texture-intensive-colorful-mix-of-acrylic-vibrant-colors-picture-image_1254870.jpg",
+        "info": "Esta es la información del producto."
+    },
+    {
+        "id": 3, 
+        "title": "Pintura 3", 
+        "value": 600, 
+        "stock": 4, 
+        "src": "https://png.pngtree.com/background/20210715/original/pngtree-colorful-abstract-painting-background-liquid-marbling-paint-background-fluid-painting-abstract-picture-image_1254873.jpg",
+        "info": "Esta es la información del producto."
+    }
+]

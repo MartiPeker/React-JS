@@ -1,7 +1,7 @@
 import {React, useState} from 'react';
 
 
-function ItemCount ({stock}) {
+function ItemCount ({stock, onAdd, id}) {
     const [cont, setCont] = useState(0);
 
     function contador(operacion) {
@@ -22,6 +22,7 @@ function ItemCount ({stock}) {
             <button className='btn btn-secondary' onClick={() => contador("-")}>
                 -
             </button>
+            <button className="m-5"onClick={() => onAdd(id, stock)}>Añadir al carrito</button>
         </>
     );
 }

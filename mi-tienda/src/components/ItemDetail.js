@@ -1,13 +1,17 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import ItemCount from "./itemCount";
+import  { useCartContext } from "../context/CartContext";
 
-const ItemDetail = ({title, src, info, value, stock}) => {
+const ItemDetail = ({id, title, src, info, value, stock}) => {
+
 
     const [show, setshow] = useState(false)
+    const {addProduct} = useCartContext();
 
-    const onAdd = () => {
+    const onAdd = (item, quantity) => {
         setshow(true)
+        addProduct(item, quantity)
     }
 
     return(
@@ -18,8 +22,8 @@ const ItemDetail = ({title, src, info, value, stock}) => {
         <p className="m-5 description">{info}</p>
         <div className="text-center">
             <p>$ {value}</p>
-            {show ? <Link to = "/cart/"><button>Ir al carrito</button></Link> :
-            <ItemCount stock={stock} onAdd = {onAdd} min={1} show={show}></ItemCount>}     
+            {show ? <Link to = "/cart/"><button>Ir al carrito</button></Link> :  
+            <ItemCount stock={stock} onAdd = {onAdd} id={id} min={1} show={show}></ItemCount>}   
         </div>
     </div>
     )

@@ -23,6 +23,7 @@ const ItemDetailContainer = () => {
         <>
         {<div>
             <ItemDetail
+                id={details.id}
                 title={details.title} 
                 src= {details.src} 
                 info={details.info} 

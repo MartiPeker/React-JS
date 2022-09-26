@@ -1,10 +1,10 @@
 import {React, useState} from 'react';
 
 
-function ItemCount ({stock, onAdd, id}) {
+function ItemCount ({stock, onAdd, id, src, title, value}) {
     const [cont, setCont] = useState(0);
 
-    const item = {id}
+    const item = {id, src, title, value}
 
     function contador(operacion) {
         if(operacion === "+" && cont < stock) {

@@ -1,5 +1,5 @@
 
-import iconCart from "./cartWidget";
+import CartWidget from "./ItemCart/cartWidget";
 import {Link} from "react-router-dom";
 
 
@@ -12,7 +12,7 @@ const Navbar = () => {
             <ul className= "navbar-nav">
                 <li className="nav-item"><Link className="nav-link" to = "/">Home</Link></li>
                 <li className="nav-item"><Link className='nav-link' to="/category">Productos</Link></li>
-                <li className="nav-item"><Link to = "/cart/"><img src={iconCart} alt="cart"/></Link></li>
+                <li className="nav-item"><Link to = "/cart/"> <CartWidget/></Link></li>
             </ul>
         </div>
     </nav>

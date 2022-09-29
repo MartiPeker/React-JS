@@ -1,21 +1,24 @@
 import {useState, useEffect} from 'react';
-import getData from '../components/getData';
+import { getFirestore, collection, getDocs } from "firebase/firestore"
 import Item from './Item';
+import { useParams } from 'react-router-dom';
 
 const ItemList = () => {
     <></>
-    const [producto, setItem] = useState([]);
+    const [productos, setItem] = useState([]);
+
     useEffect(()=>{
-      getData().then((data) => {
-        setItem(data);
-      })
+      const querydb = getFirestore();
+      const queryCollection = collection(querydb, "productos");
+      getDocs(queryCollection)
+      .then(res => setItem ( res.docs.map(producto => ({id: producto.id, ...producto.data()}))))
     }, []);
   
     return (
       <>
       <div className="row">
       {
-        producto.map(item =>
+        productos.map(item =>
           <Item key={item.id}
           id ={item.id}
           title ={item.title} 

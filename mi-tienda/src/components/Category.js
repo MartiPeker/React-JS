@@ -8,7 +8,6 @@ const Category = () => {
     const [productos, setItem] = useState([]);
 
     const {category} = useParams();
-    console.log(category);
 
       useEffect(() => {
           const querydb = getFirestore();

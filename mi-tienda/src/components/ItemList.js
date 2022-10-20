@@ -1,7 +1,6 @@
 import {useState, useEffect} from 'react';
 import { getFirestore, collection, getDocs } from "firebase/firestore"
 import Item from './Item';
-import { useParams } from 'react-router-dom';
 
 const ItemList = () => {
     <></>
@@ -16,14 +15,16 @@ const ItemList = () => {
   
     return (
       <>
-      <div className="row">
+      <h3 className="display-4 text-center m-5 text-success">Peker Art</h3>
+      <div className="m-5 pb-5 justify-content-md-center row">
       {
         productos.map(item =>
           <Item key={item.id}
           id ={item.id}
           title ={item.title} 
           src={item.src} 
-          value={item.value}/>)
+          value={item.value}/>
+          )
       }
       </div>
       </>

@@ -24,7 +24,8 @@ const Category = () => {
 
     return (
       <>
-      <div className="row">
+      <h3 className="display-5 text-center m-5 text-success">{category}</h3>
+      <div className="m-5 pb-5 justify-content-md-center row">
       {
         productos.map(item =>
           <Item key={item.id}

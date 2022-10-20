@@ -2,7 +2,7 @@ import {React, useState} from 'react';
 
 
 function ItemCount ({stock, onAdd, id, src, title, value}) {
-    const [cont, setCont] = useState(0);
+    const [cont, setCont] = useState(1);
 
     const item = {id, src, title, value}
 
@@ -17,16 +17,20 @@ function ItemCount ({stock, onAdd, id, src, title, value}) {
 
     return (
         <>
+        <div className='container'>
+            <div className='col-auto'>
             <p>
                 Cantidad: {cont} 
             </p>
-            <button className='btn btn-danger' onClick={() => contador("+")}>
+            <button className='btn btn-success m-1' onClick={() => contador("+")}>
                 +
             </button>
-            <button className='btn btn-secondary' onClick={() => contador("-")}>
+            <button className='btn btn-outline-dark' onClick={() => contador("-")}>
                 -
             </button>
-            <button className="m-5"onClick={() => onAdd(item, cont)}>Añadir al carrito</button>
+            </div>
+            <button className="m-5 col-auto btn btn-outline-success" onClick={() => onAdd(item, cont)}>Añadir al carrito</button>
+            </div>
         </>
     );
 }

@@ -1,6 +1,8 @@
 En mi tienda incorporo los conocimientos adquiridos en el curso de React-Js de CoderHouse.
 Profesor: Pablo Monteserin.
 
+GIF: https://firebasestorage.googleapis.com/v0/b/react-peker.appspot.com/o/Peker.gif?alt=media&token=0e5e533d-3340-472b-8dcb-685b9b4de035
+
 En mi estructura incluyo los siguientes componentes:
 -ItemContainer (que contiene ItemList).
 -ItemList (Mapea todos los objetos de la base de datos).
